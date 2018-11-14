@@ -80,13 +80,13 @@ You can explore all available plugins at the NPM website by [searching for the k
 
 ## Adding Homebridge to iOS
 
-HomeKit itself is actually not an app; it's a "database" similar to HealthKit and PassKit. Where HealthKit has the companion _Health_ app and PassKit has _Passbook_, HomeKit has the _Home_ app, introduced with iOS 10.
+HomeKit is not an app, it is a "database" similar to HealthKit and PassKit. Where HealthKit has the companion _Health_ app and PassKit has _Passbook_, HomeKit has the _Home_ app, both introduced with iOS 10.
 
 If you are a member of the iOS developer program, you might also find Apple's [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html) app to be useful, as it provides straightforward and comprehensive management of all HomeKit database "objects".
 
-Using the Home app (or most other HomeKit apps), you should be able to add the single accessory "Homebridge", assuming that you're still running Homebridge and you're on the same Wifi network. Adding this accessory will automatically add all accessories and platforms defined in `config.json`.
+Using the Home app (or most other HomeKit apps), you should be able to add the single accessory "Homebridge", assuming that you're still running Homebridge and you're on the same Wi-Fi network. Adding this accessory will automatically add all accessories and platforms defined under `config.json`.
 
-When you attempt to add Homebridge, it will ask for a "PIN code". The default code is `031-45-154` (but this can be changed, see `config-sample.json`).
+When you attempt to add Homebridge, it will ask for a "PIN code". The default code is `031-45-154` (see `config-sample.json` to change the default code).
 
 ## Interacting with your Devices
 
