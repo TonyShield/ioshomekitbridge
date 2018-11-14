@@ -37,7 +37,7 @@ Now you should be able to run Homebridge:
     $ homebridge
     No plugins found. See the README for information on installing plugins.
 
-Homebridge will complain if you don't have any Plugins installed, since it will essentially be useless, although you can still "pair" with it. See the next section "Installing Plugins" for more info.
+Homebridge will complain if you don't have any Plugins installed, but you can still "pair". For more information, see the next section "Installing Plugins."
 
 Once you've installed a Plugin or two, you can run Homebridge again:
 
