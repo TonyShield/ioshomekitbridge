@@ -128,15 +128,19 @@ This is very useful when you are already using your development machine to host 
 
 ### My iOS App Can't Find Homebridge
 
-Two reasons why Homebridge may not be discoverable:
+Two reasons why you can not see Homebridge:
 
-  1. Homebridge server thinks it's been paired with, but iOS thinks otherwise. Fix: deleted `persist/` directory which is next to your `config.json`.
+  1. Homebridge server thinks paired successful, but iOS thinks not. 
+  Fix: deleted `persist/` directory which is next to your `config.json`.
+  This action will reset homebridge pairing process.
 
-  2. iOS device has gotten your Homebridge `username` (looks like a MAC address) "stuck" somehow, where it's in the database but inactive. Fix: change your `username` in the "bridge" section of `config.json` to be some new value.
+  2. iOS devices have your Homebridge `username` (looks like a MAC address) "stuck" somehow, where it's in the database but inactive. 
+  Fix: change your `username` in the "bridge" section of `config.json` to new value.
+  This action will resync the homebridge database.
 
 ### Errors on startup
 
-The following errors are experienced when starting Homebridge and can be safely ignored. The cost of removing the issue at the core of the errors isn't worth the effort.
+The following errors are experienced when starting Homebridge and can be safely ignored.
 
 ```
 *** WARNING *** The program 'nodejs' uses the Apple Bonjour compatibility layer of Avahi
@@ -149,12 +153,12 @@ The following errors are experienced when starting Homebridge and can be safely 
 
 ### Limitations
 
- * One installation of Homebridge can only expose 100 accessories due to a HomeKit limit. You can however run multiple Homebridge instances by pointing them to different config and persistence paths (see issue #827).
+ * One installation of Homebridge can only expose 100 accessories due to a HomeKit limit. You can run multiple Homebridge instances by pointing them to different config and persistence paths.
  * Once an accessory has been added to the Home app, changing its name via Homebridge won't be automatically reflected in iOS. You must change it via the Home app as well.
 
 ## Why Homebridge?
 
-Technically, the device manufacturers should be the ones implementing the HomeKit API. And I'm sure they will - eventually. When they do, this project will be obsolete, and I hope that happens soon. In the meantime, Homebridge is a fun way to get a taste of the future, for those who just can't bear to wait until "real" HomeKit devices are on the market.
+Technically, the device manufacturers should be the one implementing the HomeKit API. And I am sure they will - eventually. When they do, this project will be obsolete, and I hope that happens soon. In the meantime, Homebridge is a fun way to get a taste of the future, for those who just can't bear to wait until "real" HomeKit devices are on the market.
 
 ## Credit
 
